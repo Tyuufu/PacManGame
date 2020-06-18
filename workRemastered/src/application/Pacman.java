@@ -181,15 +181,58 @@ public class Pacman implements MouseListener, KeyListener
             case KeyEvent.VK_LEFT:
                 board.player.desiredDirection='L';
                 break;
+                
             case KeyEvent.VK_RIGHT:
                 board.player.desiredDirection='R';
                 break;
+                
             case KeyEvent.VK_UP:
                 board.player.desiredDirection='U';
                 break;
+                
             case KeyEvent.VK_DOWN:
                 board.player.desiredDirection='D';
                 break;
+                
+                case KeyEvent.VK_R:
+                board.titleScreen=true;
+                break;
+                
+            case KeyEvent.VK_1:
+                Board.lastMapUsed = 1;
+                board.titleScreen = true;
+                level = 1;
+                break;
+                
+            case KeyEvent.VK_2:
+                Board.lastMapUsed = 2;
+                board.titleScreen = true;
+                level = 2;
+                break;
+                
+            case KeyEvent.VK_3:
+                Board.lastMapUsed = 3;
+                board.titleScreen = true;
+                level = 3;
+                break;
+                
+            case KeyEvent.VK_4:
+                Board.lastMapUsed = 4;
+                board.titleScreen = true;
+                level = 4;
+                break;
+                
+            case KeyEvent.VK_5:
+                Board.lastMapUsed = 5;
+                board.titleScreen = true;
+                level = 5;
+                break;
+                
+            case KeyEvent.VK_6:
+                Board.lastMapUsed = 6;
+                board.titleScreen = true;
+                level = 6;
+                break
         }
 
         repaint();
