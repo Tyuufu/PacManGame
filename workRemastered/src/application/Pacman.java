@@ -165,6 +165,14 @@ public class Pacman implements MouseListener, KeyListener
             board.overScreen = false;
             return;
         }
+        /* Pressing a key during a demo kills the demo mode and starts a new game */
+        else if (board.demo)
+        {
+            board.demo=false;
+            /* Stop any pacman eating sounds */
+            board.New=1;
+            return;
+        }
 
 
         /* Otherwise, key presses control the player! */
