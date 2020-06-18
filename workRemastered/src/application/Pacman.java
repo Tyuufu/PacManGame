@@ -75,7 +75,13 @@ public class Pacman implements MouseListener, KeyListener
     */
     public void repaint()
     {
-        board.repaint ();
+        board.repaint(0,0,600,20);
+        board.repaint(0,420,600,40);
+        board.repaint(board.player.x-20, board.player.y-20,80,80);
+        board.repaint(board.ghost1.x-20, board.ghost1.y-20,80,80);
+        board.repaint(board.ghost2.x-20, board.ghost2.y-20,80,80);
+        board.repaint(board.ghost3.x-20, board.ghost3.y-20,80,80);
+        board.repaint(board.ghost4.x-20, board.ghost4.y-20,80,80);
     }
 
     /* Steps the screen forward one frame */
@@ -101,6 +107,12 @@ public class Pacman implements MouseListener, KeyListener
                 board.ghost3.move ( );
                 board.ghost4.move ( );
             }
+            
+                board.player.updatePellet ( );
+                board.ghost1.updatePellet ( );
+                board.ghost2.updatePellet ( );
+                board.ghost3.updatePellet ( );
+                board.ghost4.updatePellet ( );
 
         }
 
