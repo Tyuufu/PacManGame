@@ -69,17 +69,23 @@ class Player extends Mover
             {
 
                 case 'L':
+                    if ( isValidDest(x-increment,y))
+                        x -= increment;
 
                     break;
                 case 'R':
+                    if ( isValidDest(x+gridSize,y))
+                        x+= increment;
 
                     break;
                 case 'U':
-
+                    if ( isValidDest(x,y-increment))
+                        y-= increment;
 
                     break;
                 case 'D':
-
+                    if ( isValidDest(x,y+gridSize))
+                        y+= increment;
 
                     break;
             }
@@ -88,21 +94,34 @@ class Player extends Mover
         if (lastX==x && lastY==y)
         {
 
-
-            switch(currDirection)
+        switch(currDirection)
             {
                 case 'L':
 
-
+                    if ( isValidDest(x-increment,y))
+                        x -= increment;
+                    else if (y == 9*gridSize && x < 2 * gridSize)
+                    {
+                        x = max - gridSize*1;
+                        teleport = true;
+                    }
                     break;
                 case 'R':
-
+                    if ( isValidDest(x+gridSize,y))
+                        x+= increment;
+                    else if (y == 9*gridSize && x > max - gridSize*2)
+                    {
+                        x = 1*gridSize;
+                        teleport=true;
+                    }
                     break;
                 case 'U':
-
+                    if ( isValidDest(x,y-increment))
+                        y-= increment;
                     break;
                 case 'D':
-
+                    if ( isValidDest(x,y+gridSize))
+                        y+= increment;
                     break;
             }
         }
@@ -129,7 +148,11 @@ class Player extends Mover
 
     /* Update what pellet the pacman is on top of */
     public void updatePellet(){
-
+        if (x%gridSize ==0 && y%gridSize == 0)
+        {
+            pelletX = x/gridSize-1;
+            pelletY = y/gridSize-1;
+        }
     }
 
 }
