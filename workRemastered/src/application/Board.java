@@ -174,186 +174,225 @@ public class Board extends JPanel
     public void drawBoard(Graphics g)
     {
         if (Pacman.level == 1) {
-            pelletsMustbeEatean = 192;
-            lastMapUsed = 1;
-            g.setColor (Color.BLACK);
-            g.fillRect (0 , 0 , 600 , 600);
-            g.setColor (Color.BLACK);
-            g.fillRect (0 , 0 , 420 , 420);
+            pelletsMustbeEatean = 173;
+            lastMapUsed = 2;
+            g.setColor(Color.BLACK);
+            g.fillRect(0,0,600,600);
+            g.setColor(Color.BLACK);
+            g.fillRect(0,0,420,420);
 
-            g.setColor (Color.BLACK);
-            g.fillRect (0 , 0 , 20 , 600);
-            g.fillRect (0 , 0 , 600 , 20);
-            g.setColor (Color.WHITE);
-            g.drawRect (19 , 19 , 382 , 382);
-            g.setColor (Color.RED);
+            g.setColor(Color.BLACK);
+            g.fillRect(0,0,20,600);
+            g.fillRect(0,0,600,20);
+            g.setColor(Color.WHITE);
+            g.drawRect(19,19,382,382);
+            
+            g.setColor(Color.RED);
 
-            //верх
-            g.fillRect (60 , 40 , 20 , 40);
-            updateMap (60 , 40 , 20 , 40);
-            g.fillRect (20 , 20 , 20 , 20);
-            updateMap (20 , 20 , 20 , 20);
+            g.fillRect(40,40,60,20);
+            updateMap(40,40,60,20);
+            g.fillRect(120,40,60,20);
+            updateMap(120,40,60,20);
+            g.fillRect(200,20,20,40);
+            updateMap(200,20,20,40);
+            g.fillRect(240,40,60,20);
+            updateMap(240,40,60,20);
+            g.fillRect(320,40,60,20);
+            updateMap(320,40,60,20);
+            g.fillRect(40,80,60,20);
+            updateMap(40,80,60,20);
+            g.fillRect(160,80,100,20);
+            updateMap(160,80,100,20);
+            g.fillRect(200,80,20,60);
+            updateMap(200,80,20,60);
+            g.fillRect(320,80,60,20);
+            updateMap(320,80,60,20);
 
-            g.fillRect (40 , 60 , 20 , 20);
-            updateMap (40 , 60 , 20 , 20);
+            g.fillRect(20,120,80,60);
+            updateMap(20,120,80,60);
+            g.fillRect(320,120,80,60);
+            updateMap(320,120,80,60);
+            g.fillRect(20,200,80,60);
+            updateMap(20,200,80,60);
+            g.fillRect(320,200,80,60);
+            updateMap(320,200,80,60);
+            
+            //center
+            g.fillRect(160,160,40,20);
+            updateMap(160,160,40,20);
+            g.fillRect(220,160,40,20);
+            updateMap(220,160,40,20);
+            g.fillRect(160,180,20,20);
+            updateMap(160,180,20,20);
+            g.fillRect(160,200,100,20);
+            updateMap(160,200,100,20);
+            g.fillRect(240,180,20,20);
+            updateMap(240,180,20,20);
+           
+           g.setColor(Color.BLUE);
 
-            g.fillRect (100 , 40 , 80 , 20);
-            updateMap (100 , 40 , 80 , 20);
+            g.fillRect(120,120,60,20);
+            updateMap(120,120,60,20);
+            g.fillRect(120,80,20,100);
+            updateMap(120,80,20,100);
+            g.fillRect(280,80,20,100);
+            updateMap(280,80,20,100);
+            g.fillRect(240,120,60,20);
+            updateMap(240,120,60,20);
 
-            g.fillRect (200 , 20 , 20 , 40);
-            updateMap (200 , 20 , 20 , 40);
+            g.fillRect(280,200,20,60);
+            updateMap(280,200,20,60);
+            g.fillRect(120,200,20,60);
+            updateMap(120,200,20,60);
+            g.fillRect(160,240,100,20);
+            updateMap(160,240,100,20);
+            g.fillRect(200,260,20,40);
+            updateMap(200,260,20,40);
 
-            g.fillRect (240 , 40 , 80 , 20);
-            updateMap (240 , 40 , 80 , 20);
-            g.fillRect (340 , 40 , 20 , 40);
-            updateMap (340 , 40 , 20 , 40);
-            g.fillRect (360 , 60 , 20 , 20);
-            updateMap (360 , 60 , 20 , 20);
-            g.fillRect (380 , 20 , 20 , 20);
-            updateMap (380 , 20 , 20 , 20);
+            g.fillRect(120,280,60,20);
+            updateMap(120,280,60,20);
+            g.fillRect(240,280,60,20);
+            updateMap(240,280,60,20);
 
+            g.fillRect(40,280,60,20);
+            updateMap(40,280,60,20);
+            g.fillRect(80,280,20,60);
+            updateMap(80,280,20,60);
+            g.fillRect(320,280,60,20);
+            updateMap(320,280,60,20);
+            g.fillRect(320,280,20,60);
+            updateMap(320,280,20,60);
 
-            g.fillRect (60 , 80 , 40 , 20);
-            updateMap (60 , 80 , 40 , 20);
-            g.fillRect (320 , 80 , 40 , 20);
-            updateMap (320 , 80 , 40 , 20);
-            g.setColor (Color.BLUE);
-            g.fillRect (20 , 100 , 20 , 20);
-            updateMap (20 , 100 , 20 , 20);
-            g.fillRect (160 , 80 , 100 , 20);
-            updateMap (160 , 80 , 100 , 20);
-            g.fillRect (200 , 80 , 20 , 60);
-            updateMap (200 , 80 , 20 , 60);
-            g.fillRect (380 , 100 , 20 , 20);
-            updateMap (380 , 100 , 20 , 20);
+            g.setColor(Color.green);
 
+            g.fillRect(20,320,40,20);
+            updateMap(20,320,40,20);
+            g.fillRect(360,320,40,20);
+            updateMap(360,320,40,20);
+            g.fillRect(160,320,100,20);
+            updateMap(160,320,100,20);
+            g.fillRect(200,320,20,60);
+            updateMap(200,320,20,60);
 
-// квадрати возле телепорта
-            //1
-            g.fillRect (20 , 120 , 80 , 20);
-            updateMap (20 , 120 , 80 , 20);
-            g.fillRect (80 , 140 , 20 , 40);
-            updateMap (80 , 140 , 20 , 40);
-            g.fillRect (40 , 160 , 40 , 20);
-            updateMap (40 , 160 , 40 , 20);
-            //2
-            g.fillRect (320 , 120 , 80 , 20);
-            updateMap (320 , 120 , 80 , 20);
-            g.fillRect (320 , 140 , 20 , 40);
-            updateMap (320 , 140 , 20 , 40);
-            g.fillRect (340 , 160 , 40 , 20);
-            updateMap (340 , 160 , 40 , 20);
-            //3
-            g.fillRect (20 , 240 , 80 , 20);
-            updateMap (20 , 240 , 80 , 20);
-            g.fillRect (80 , 200 , 20 , 40);
-            updateMap (80 , 200 , 20 , 40);
-            g.fillRect (40 , 200 , 40 , 20);
-            updateMap (40 , 200 , 40 , 20);
+            g.fillRect(40,360,140,20);
+            updateMap(40,360,140,20);
+            g.fillRect(240,360,140,20);
+            updateMap(240,360,140,20);
+            g.fillRect(280,320,20,40);
+            updateMap(280,320,20,60);
+            g.fillRect(120,320,20,60);
+            updateMap(120,320,20,60);
+            drawLives (g, numLives + 1);
 
-            //4
-            g.fillRect (320 , 240 , 80 , 20);
-            updateMap (320 , 240 , 80 , 20);
-            g.fillRect (320 , 200 , 20 , 40);
-            updateMap (320 , 200 , 20 , 40);
-            g.fillRect (340 , 200 , 40 , 20);
-            updateMap (340 , 200 , 40 , 20);
+        }else if (Pacman.level == 2){
+            numLives = 2;
+            pelletsMustbeEatean = 177;
+            lastMapUsed = 3;
+            g.setColor(Color.BLACK);
+            g.fillRect(0,0,600,600);
+            g.setColor(Color.BLACK);
+            g.fillRect(0,0,420,420);
 
+            g.setColor(Color.BLACK);
+            g.fillRect(0,0,20,600);
+            g.fillRect(0,0,600,20);
+            g.setColor(Color.WHITE);
+            g.drawRect(19,19,382,382);
+            
+            //Ромашка
+            
+            g.fillRect(200,280,20,20);
+            updateMap(200,280,20,20);
 
-            g.fillRect (160 , 160 , 40 , 20);
-            updateMap (160 , 160 , 40 , 20);
-            g.fillRect (220 , 160 , 40 , 20);
-            updateMap (220 , 160 , 40 , 20);
-            g.fillRect (160 , 180 , 20 , 20);
-            updateMap (160 , 180 , 20 , 20);
-            g.fillRect (160 , 200 , 100 , 20);
-            updateMap (160 , 200 , 100 , 20);
-            g.fillRect (240 , 180 , 20 , 20);
-            updateMap (240 , 180 , 20 , 20);
-            g.setColor (Color.GREEN);
+            g.fillRect(40,40,40,20);
+            updateMap(40,40,40,20);
+            g.fillRect(40,60,80,20);
+            updateMap(40,60,80,20);
+            g.fillRect(60,80,60,20);
+            updateMap(60,80,60,20);
+            g.fillRect(40,120,80,20);
+            updateMap(40,120,80,20);
+            g.fillRect(60,140,80,20);
+            updateMap(60,140,80,20);
+            g.fillRect(40,220,80,20);
+            updateMap(40,220,80,20);
+            g.fillRect(60,200,80,20);
+            updateMap(60,200,80,20);
+            g.fillRect(60,260,60,20);
+            updateMap(60,260,60,20);
+            g.fillRect(40,280,80,20);
+            updateMap(40,280,80,20);
+            g.fillRect(40,300,60,20);
+            updateMap(40,300,60,20);
+            g.fillRect(60,320,40,40);
+            updateMap(60,320,40,40);
+            g.fillRect(140,40,40,60);
+            updateMap(140,40,40,60);
+            g.fillRect(160,100,40,40);
+            updateMap(160,100,40,40);
+            g.fillRect(180,80,20,20);
+            updateMap(180,80,20,20);
+            g.fillRect(220,80,20,20);
+            updateMap(220,80,20,20);
+            g.fillRect(240,40,40,60);
+            updateMap(240,40,40,60);
+            g.fillRect(220,100,40,40);
+            updateMap(220,100,40,40);
+            g.fillRect(160,260,40,60);
+            updateMap(160,260,40,60);
+            g.fillRect(140,300,40,80);
+            updateMap(140,300,40,80);
+            g.fillRect(140,280,20,20);
+            updateMap(140,280,20,20);
+            g.fillRect(220,260,40,60);
+            g.fillRect(180,300,20,20);
+            updateMap(180,300,20,20);
+            g.fillRect(220,300,20,20);
+            updateMap(220,300,20,20);
+            updateMap(220,260,40,60);
+            g.fillRect(260,280,20,20);
+            updateMap(260,280,20,20);
+            g.fillRect(240,300,40,80);
+            updateMap(240,300,40,80);
+            g.fillRect(300,60,60,40);
+            updateMap(300,60,60,40);
+            g.fillRect(340,40,40,20);
+            updateMap(340,40,40,20);
+            g.fillRect(360,60,20,20);
+            updateMap(360,60,20,20);
+            g.fillRect(300,120,60,40);
+            updateMap(300,120,60,40);
+            g.fillRect(280,140,20,20);
+            updateMap(280,140,20,20);
+            g.fillRect(360,120,20,20);
+            updateMap(360,120,20,20);
+            g.fillRect(300,200,60,40);
+            updateMap(300,200,60,40);
+            g.fillRect(280,200,20,20);
+            updateMap(280,200,20,20);
+            g.fillRect(360,220,20,20);
+            updateMap(360,220,20,20);
+            g.fillRect(300,260,60,40);
+            updateMap(300,260,60,40);
+            g.fillRect(360,280,20,40);
+            updateMap(360,280,20,40);
+            g.fillRect(320,300,40,60);
+            updateMap(320,300,40,60);
 
-            g.setColor (Color.YELLOW);
-            g.fillRect (120 , 120 , 60 , 20);
-            updateMap (120 , 120 , 60 , 20);
-            g.fillRect (120 , 80 , 20 , 20);
-            updateMap (120 , 80 , 20 , 20);
-            g.fillRect (120 , 120 , 20 , 60);
-            updateMap (120 , 120 , 20 , 60);
-            g.fillRect (280 , 80 , 20 , 20);
-            updateMap (280 , 80 , 20 , 20);
-            g.fillRect (280 , 120 , 20 , 60);
-            updateMap (280 , 120 , 20 , 60);
-            g.fillRect (240 , 120 , 60 , 20);
-            updateMap (240 , 120 , 60 , 20);
-            g.setColor (Color.GREEN);
+            //center
+            g.setColor(Color.yellow);
+            g.fillRect(160,160,40,20);
+            updateMap(160,160,40,20);
+            g.fillRect(220,160,40,20);
+            updateMap(220,160,40,20);
+            g.fillRect(160,180,20,20);
+            updateMap(160,180,20,20);
+            g.fillRect(160,200,100,20);
+            updateMap(160,200,100,20);
+            g.fillRect(240,180,20,20);
+            updateMap(240,180,20,20);
 
-            g.setColor (Color.YELLOW);
-            g.fillRect (280 , 200 , 20 , 60);
-            updateMap (280 , 200 , 20 , 60);
-            g.fillRect (120 , 200 , 20 , 60);
-            updateMap (120 , 200 , 20 , 60);
-            g.fillRect (160 , 240 , 20 , 20);
-            updateMap (160 , 240 , 20 , 20);
-            g.fillRect (240 , 240 , 20 , 20);
-            updateMap (240 , 240 , 20 , 20);
-            g.fillRect (200 , 240 , 20 , 20);
-            updateMap (200 , 240 , 20 , 20);
-            g.fillRect (200 , 280 , 20 , 20);
-            updateMap (200 , 280 , 20 , 20);
-            g.setColor (Color.GREEN);
-
-            g.fillRect (120 , 280 , 60 , 20);
-            updateMap (120 , 280 , 60 , 20);
-            g.fillRect (240 , 280 , 60 , 20);
-            updateMap (240 , 280 , 60 , 20);
-
-
-            g.fillRect (40 , 280 , 60 , 20);
-            updateMap (40 , 280 , 60 , 20);
-            g.fillRect (80 , 280 , 20 , 40);
-            updateMap (80 , 280 , 20 , 40);
-            g.fillRect (320 , 280 , 60 , 20);
-            updateMap (320 , 280 , 60 , 20);
-            g.fillRect (320 , 280 , 20 , 40);
-            updateMap (320 , 280 , 20 , 40);
-
-
-            g.fillRect (20 , 320 , 40 , 20);
-            updateMap (20 , 320 , 40 , 20);
-            g.fillRect (360 , 320 , 40 , 20);
-            updateMap (360 , 320 , 40 , 20);
-//        g.fillRect(160,320,100,20);
-//        updateMap(160,320,100,20);
-            g.fillRect (200 , 320 , 20 , 60);
-            updateMap (200 , 320 , 20 , 60);
-
-
-            g.fillRect (80 , 340 , 40 , 20);
-            updateMap (80 , 340 , 40 , 20);
-            g.fillRect (140 , 340 , 40 , 20);
-            updateMap (140 , 340 , 40 , 20);
-            g.fillRect (160 , 320 , 20 , 60);
-            updateMap (160 , 320 , 20 , 60);
-            g.fillRect (40 , 360 , 60 , 20);
-            updateMap (40 , 360 , 60 , 20);
-            g.fillRect (120 , 380 , 20 , 20);
-            updateMap (120 , 380 , 20 , 20);
-
-            g.fillRect (240 , 340 , 40 , 20);
-            updateMap (240 , 340 , 40 , 20);
-            g.fillRect (300 , 340 , 40 , 20);
-            updateMap (300 , 340 , 40 , 20);
-            g.fillRect (280 , 380 , 20 , 20);
-            updateMap (280 , 380 , 20 , 20);
-            g.fillRect (240 , 320 , 20 , 60);
-            updateMap (240 , 320 , 20 , 60);
-
-            g.fillRect (320 , 360 , 60 , 20);
-            updateMap (320 , 360 , 60 , 20);
-            drawLives (g , numLives + 1);
-
-        }else {
-
+            drawLives (g, numLives + 1);
     }
 
     }
