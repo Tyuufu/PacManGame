@@ -66,16 +66,16 @@ class Ghost extends Mover
         switch(direction)
         {
             case 'L':
-
+                backwards='R';
                 break;
             case 'R':
-
+                backwards='L';
                 break;
             case 'U':
-
+                backwards='D';
                 break;
             case 'D':
-
+                backwards='U';
                 break;
         }
 
@@ -97,19 +97,24 @@ class Ghost extends Mover
             random = (int)(Math.random()*4) + 1;
             if (random == 1)
             {
-
+                newDirection = 'L';
+                lookX-= increment;
             }
             else if (random == 2)
             {
 
+                newDirection = 'R';
+                lookX+= gridSize;
             }
             else if (random == 3)
             {
-
+                newDirection = 'U';
+                lookY-=increment;
             }
             else if (random == 4)
             {
-
+                newDirection = 'D';
+                lookY+=gridSize;
             }
             if (newDirection != backwards)
             {
@@ -135,16 +140,20 @@ class Ghost extends Mover
         switch(direction)
         {
             case 'L':
-
+                if ( isValidDest(x-increment,y))
+                    x -= increment;
                 break;
-            case 'R':
-
+            case 'R':                
+                if ( isValidDest(x+gridSize,y))
+                    x+= increment;
                 break;
             case 'U':
-
+                  if ( isValidDest(x,y-increment))
+                    y-= increment;
                 break;
             case 'D':
-
+                 if ( isValidDest(x,y+gridSize))
+                    y+= increment;
                 break;
         }
     }
