@@ -100,13 +100,34 @@ public class Board extends JPanel
     /* Reads the high scores file and saves it */
     public void initHighScores()
     {
-
+        File file = new File("highScores.txt");
+        Scanner sc;
+        try
+        {
+            sc = new Scanner(file);
+            highScore = sc.nextInt();
+            sc.close();
+        }
+        catch(Exception e)
+        {
+        }
     }
 
     /* Writes the new high score to a file and sets flag to update it on screen */
     public void updateScore(int score)
     {
-
+        PrintWriter out;
+        try
+        {
+            out = new PrintWriter("highScores.txt");
+            out.println(score);
+            out.close();
+        }
+        catch(Exception e)
+        {
+        }
+        highScore=score;
+        clearHighScores=true;
     }
 
     /* Wipes the high scores file and sets flag to update it on screen */
@@ -163,7 +184,19 @@ public class Board extends JPanel
     }
     public void drawLives(Graphics g, int numLives)
     {
-
+         g.setColor(Color.BLACK);
+        /*Clear the bottom bar*/
+        for(int i = 0;i<numLives;i++)
+        {
+            /*Draw each life */
+//            g.fillOval(gridSize*(i+1),max+5,gridSize,gridSize);
+            g.drawImage(heart,gridSize*(i+1),max+5,Color.BLACK,null);
+            g.setColor (Color.WHITE);
+            g.setFont (font);
+            g.drawString("Press 'r' to reset",100,max+5+10);
+            g.drawString("Press numbers from 1 to 6 to choose level ",100,max+5+24);
+        }
+        /* Draw the menu items */
 
 
     }
