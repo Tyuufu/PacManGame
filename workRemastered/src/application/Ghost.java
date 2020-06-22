@@ -41,8 +41,16 @@ class Ghost extends Mover
     /* update pellet status */
     public void updatePellet()
     {
-
-
+        int tempX,tempY;
+        tempX = x/gridSize-1;
+        tempY = y/gridSize-1;
+        if (tempX != pelletX || tempY != pelletY)
+        {
+            lastPelletX = pelletX;
+            lastPelletY = pelletY;
+            pelletX=tempX;
+            pelletY = tempY;
+        }
     }
 
     /* Determines if the location is one where the ghost has to make a decision*/
@@ -60,7 +68,6 @@ class Ghost extends Mover
     {
         int random;
         char backwards='U';
-//        int newX=x,newY=y;
         int lookX=x,lookY=y;
         Set<Character> set = new HashSet<Character> ();
         switch(direction)
