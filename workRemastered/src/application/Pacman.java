@@ -244,7 +244,7 @@ public class Pacman implements MouseListener, KeyListener
                 Board.lastMapUsed = 6;
                 board.titleScreen = true;
                 level = 6;
-                break
+                break;
         }
 
         repaint();
