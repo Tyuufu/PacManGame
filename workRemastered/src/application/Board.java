@@ -208,7 +208,7 @@ public class Board extends JPanel
     {
         if (Pacman.level == 1) {
             pelletsMustbeEatean = 173;
-            lastMapUsed = 2;
+            lastMapUsed = 1;
             g.setColor(Color.BLACK);
             g.fillRect(0,0,600,600);
             g.setColor(Color.BLACK);
@@ -320,7 +320,7 @@ public class Board extends JPanel
         }else if (Pacman.level == 2){
             numLives = 2;
             pelletsMustbeEatean = 177;
-            lastMapUsed = 3;
+            lastMapUsed = 2;
             g.setColor(Color.BLACK);
             g.fillRect(0,0,600,600);
             g.setColor(Color.BLACK);
@@ -430,7 +430,7 @@ public class Board extends JPanel
     
      numLives=1;
             pelletsMustbeEatean = 166;
-            lastMapUsed = 5;
+            lastMapUsed = 3;
             g.setColor(Color.BLACK);
             g.fillRect(0,0,600,600);
             g.setColor(Color.BLACK);
@@ -538,7 +538,7 @@ public class Board extends JPanel
     
      numLives=1;
             pelletsMustbeEatean = 172;
-            lastMapUsed = 6;
+            lastMapUsed = 4;
             g.setColor(Color.BLACK);
             g.fillRect(0,0,600,600);
             g.setColor(Color.BLACK);
@@ -640,7 +640,7 @@ public class Board extends JPanel
     
        numLives=1;
             pelletsMustbeEatean = 222;
-            lastMapUsed = 4;
+            lastMapUsed = 5;
             g.setColor(Color.BLACK);
             g.fillRect(0,0,600,600);
             g.setColor(Color.BLACK);
@@ -729,7 +729,7 @@ public class Board extends JPanel
     
     }if (Pacman.level == 6) {
             pelletsMustbeEatean = 192;
-            lastMapUsed = 1;
+            lastMapUsed = 6;
             g.setColor (Color.BLACK);
             g.fillRect (0 , 0 , 600 , 600);
             g.setColor (Color.BLACK);
